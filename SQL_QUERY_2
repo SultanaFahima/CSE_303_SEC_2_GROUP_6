@@ -1,0 +1,7 @@
+SELECT  COUNT(ploid) AS ‘# of PLO’s’
+FROM plo_t p
+INNER JOIN Program_t pr ON p.programID = pr.programID
+INNER JOIN course_t c ON pr.programID = c.programID
+INNER JOIN section_t s on s.courseID= c.courseID
+WHERE  s.semester = “Autum”
+AND s.year = “2021”;
