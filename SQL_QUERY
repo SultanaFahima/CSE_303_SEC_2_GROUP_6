@@ -1,0 +1,4 @@
+SELECT  COUNT(ploid) AS ‘# of PLO’s’
+FROM plo_t p
+INNER JOIN Program_t pr ON p.programID = pr.programID
+INNER JOIN student_t s ON pr.programID = s.programID
